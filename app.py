@@ -10,24 +10,24 @@ from collections import Counter
 # Page configuration
 # --------------------------------
 st.set_page_config(
-    page_title="YOLO26 Object Detection",
+    page_title="My Object Detection",
     page_icon="🔍",
     layout="wide"
 )
 
-st.title("YOLO26 - Object Detection")
-st.write("Upload an image to identify objects using your YOLO26 model.")
+st.title("My - Object Detection")
+st.write("Upload an image to identify objects using my model.")
 
 # --------------------------------
-# Load YOLO model
+# Load my model
 # --------------------------------
 @st.cache_resource
 def load_model():
-    return YOLO("yolo26n.pt")
+    return YOLO("sandeep_obj.pt")
 
 try:
     model = load_model()
-    st.success("YOLO26 model loaded successfully!")
+    st.success("My model loaded successfully!")
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
