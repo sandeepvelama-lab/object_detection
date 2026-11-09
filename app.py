@@ -23,7 +23,7 @@ st.write("Upload an image to identify objects using my model.")
 # --------------------------------
 @st.cache_resource
 def load_model():
-    return YOLO("sandeep.pt")
+    return YOLO("yolo26n.pt")
 
 try:
     model = load_model()
